@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -8,6 +9,7 @@ import Menu from './pages/Menu/Menu';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import myImage from './utils/images/Logo.jpg';
 
 function App() {
   return (
@@ -16,13 +18,13 @@ function App() {
         <Container>
           <Navbar.Brand>
             <Link to='/' className='navbar-brand text-success d-flex align-items-center'>
-              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" className="bi bi-r-circle-fill" viewBox="0 0 16 16">
-                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002V12h1.335V8.924H8.52L9.98 12h1.52L9.856 8.701c.828-.299 1.495-1.101 1.495-2.238 0-1.488-1.03-2.461-2.74-2.461H5.5Zm1.335 1.09v2.777h1.549c.995 0 1.573-.463 1.573-1.36 0-.913-.596-1.417-1.537-1.417z"/>
-              </svg>
-              <span className='mx-2 lh-1 fw-semibold'>
-                React
+              {/* <svg  width="42" height="42" fill="currentColor" viewBox="0 0 16 16"> */}
+              <img src={myImage} width="42" height="42" alt="logo" style={{ borderWidth: 0, borderRadius: "50%" }} />
+              {/* </svg> */}
+              <span className='mx-2 lh-1 fw-semibold' style={{ color: 'orange' }}>
+                Bolivian
                 <br></br>
-                Restaurant
+                Bites
               </span>
             </Link>
           </Navbar.Brand>
